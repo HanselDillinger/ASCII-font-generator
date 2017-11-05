@@ -87,7 +87,7 @@ class FontGenerator:
     def introduction_and_generation(self, font_num):
         """
         Font example.
-        It also accepts user text.
+        It also accepts user's text.
         """
 
         while True:
@@ -98,23 +98,24 @@ class FontGenerator:
             print("Type ':b' to return to the menu.")
             text = str(input("Please enter your text: "))
 
-            # Back to main menu
+            # Back to the main menu
             if text == ":b":
                 return
 
-            # If user didn't type anything
+            # a user didn't type anything
             if not text:
                 continue
 
             ascii_text = pyfiglet.figlet_format(text, font=self.font_list[font_num])
             print(ascii_text)
 
-            # Loop until user type a correct command
+            # Loop until a user type a correct command
             while True:
                 print(colored("Save? t/i/b (text/image/back)", "white", "on_green"))
                 command = str(input("Please enter a char : "))
 
                 if command == "b" or command == "t" or command == "i":
+                    
                     if command == "b":
                         break
 
