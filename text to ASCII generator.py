@@ -1,5 +1,5 @@
 """
-ASCII font generator
+text to ASCII generator
 """
 
 import os
